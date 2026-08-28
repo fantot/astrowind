@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: AI 实用指南
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,26 +9,24 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: AI 实用指南
+    template: '%s｜AI 实用指南'
+  description: 'AI 工具使用、订阅咨询与实用知识分享，帮助你更简单、更高效地使用 ChatGPT、Claude、Gemini 等 AI 工具。'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: AI 实用指南
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: zh-CN
   textDirection: ltr
 
 apps:
@@ -69,4 +67,4 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

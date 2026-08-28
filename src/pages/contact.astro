@@ -1,78 +1,35 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-
-const metadata = {
-  title: 'Contact',
-};
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+const metadata = { title: '联系作者', description: '通过企业微信联系作者，咨询 AI 工具订阅与使用问题。' };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
+  <Hero
+    tagline="联系作者"
+    title={'让我们聊聊你的 <span class="text-primary">AI 需求</span>'}
+    subtitle="请先简单说明想咨询的工具、遇到的问题和期望目标，沟通会更高效。"
+    actions={[{ variant: 'primary', text: '查看企业微信二维码', href: '#consult-author', icon: 'tabler:qrcode' }]}
   />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
+  <Features
+    title="适合咨询这些问题"
+    columns={3}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: '订阅前怎么选',
+        description: '结合预算、设备和使用场景，判断是否值得订阅以及选择哪个版本。',
+        icon: 'tabler:route',
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: '使用中遇到问题',
+        description: '梳理常见账号、功能、模型选择与使用方式问题。',
+        icon: 'tabler:help-circle',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: '工作流怎么搭',
+        description: '围绕写作、研究、编程、绘图或视频等目标给出思路。',
+        icon: 'tabler:assembly',
       },
     ]}
   />

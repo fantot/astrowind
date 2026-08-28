@@ -1,0 +1,76 @@
+---
+import placeholder from '~/assets/images/default.png';
+
+const wechatContactUrl = import.meta.env.PUBLIC_WECHAT_CONTACT_URL;
+---
+
+<dialog
+  id="consult-author-dialog"
+  class="m-auto w-[calc(100%-2rem)] max-w-md rounded-3xl border border-slate-200 bg-white p-0 text-default shadow-2xl backdrop:bg-slate-950/60 dark:border-slate-700 dark:bg-slate-900"
+  aria-labelledby="consult-author-title"
+>
+  <div class="relative p-6 text-center sm:p-8">
+    <button
+      type="button"
+      data-close-consult
+      class="absolute right-4 top-4 rounded-full p-2 text-muted transition hover:bg-slate-100 hover:text-default dark:hover:bg-slate-800"
+      aria-label="关闭咨询窗口"
+    >
+      <span aria-hidden="true" class="text-2xl leading-none">×</span>
+    </button>
+    <p class="mb-2 text-sm font-semibold tracking-wider text-primary">一对一沟通</p>
+    <h2 id="consult-author-title" class="text-2xl font-bold">添加企业微信咨询</h2>
+    <p class="mt-3 text-sm leading-6 text-muted">请使用企业微信或微信扫码，备注你想咨询的 AI 工具或具体问题。</p>
+    <div
+      class="mx-auto mt-6 aspect-square w-56 overflow-hidden rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-3 dark:border-slate-600 dark:bg-slate-800"
+    >
+      <img
+        src={placeholder.src}
+        width="224"
+        height="224"
+        alt="企业微信二维码占位图，稍后替换"
+        class="h-full w-full rounded-xl object-cover opacity-25"
+      />
+    </div>
+    <p class="mt-4 text-xs text-muted">当前为二维码占位图，正式二维码将在后续替换</p>
+    {
+      wechatContactUrl ? (
+        <a
+          href={wechatContactUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary mt-5 inline-flex w-full items-center justify-center"
+        >
+          打开微信联系作者
+        </a>
+      ) : (
+        <p class="mt-5 rounded-xl bg-blue-50 px-4 py-3 text-sm text-blue-800 dark:bg-blue-950 dark:text-blue-200">
+          配置企业微信“联系我”链接后，这里会显示一键打开微信按钮。
+        </p>
+      )
+    }
+  </div>
+</dialog>
+
+<script>
+  const bindConsultDialog = () => {
+    const dialog = document.querySelector<HTMLDialogElement>('#consult-author-dialog');
+    if (!dialog || dialog.dataset.bound === 'true') return;
+    dialog.dataset.bound = 'true';
+
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const trigger = target.closest<HTMLAnchorElement>('a[href="#consult-author"]');
+      if (trigger) {
+        event.preventDefault();
+        dialog.showModal();
+      }
+    });
+    dialog.querySelector('[data-close-consult]')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  };
+  bindConsultDialog();
+  document.addEventListener('astro:page-load', bindConsultDialog);
+</script>
