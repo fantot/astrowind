@@ -1,6 +1,6 @@
 site:
-  name: AI 实用指南
-  site: 'https://astrowind.vercel.app'
+  name: AI 学习实验室
+  site: 'https://www.aixilab.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AI 实用指南
-    template: '%s｜AI 实用指南'
-  description: 'AI 工具使用、订阅咨询与实用知识分享，帮助你更简单、更高效地使用 ChatGPT、Claude、Gemini 等 AI 工具。'
+    default: AI 学习实验室
+    template: '%s｜AI 学习实验室'
+  description: '提供 ChatGPT、Claude、Grok、Gemini 会员充值服务与实用 AI 知识分享。'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AI 实用指南
+    site_name: AI 学习实验室
     images:
       - url: '~/assets/images/default.png'
         width: 1200

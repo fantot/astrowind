@@ -2,12 +2,12 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-const metadata = { title: '联系作者', description: '通过企业微信联系作者，咨询 AI 工具订阅与使用问题。' };
+const metadata = { title: '联系客服', description: '通过企业微信联系客服，咨询 AI 工具订阅与使用问题。' };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="联系作者"
+    tagline="联系客服"
     title={'让我们聊聊你的 <span class="text-primary">AI 需求</span>'}
     subtitle="请先简单说明想咨询的工具、遇到的问题和期望目标，沟通会更高效。"
     actions={[{ variant: 'primary', text: '查看企业微信二维码', href: '#consult-author', icon: 'tabler:qrcode' }]}

@@ -7,7 +7,7 @@ tags:
   - ChatGPT
   - Claude
   - Gemini
-author: AI 实用指南
+author: AI 学习实验室
 ---
 
 选择 AI 工具时，最容易踩的坑是只看排行榜。模型能力变化很快，真正重要的是：它是否适合你的工作方式。

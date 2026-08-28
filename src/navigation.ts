@@ -3,22 +3,22 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: '首页', href: getPermalink('/') },
-    { text: 'AI 服务', href: getPermalink('/services') },
-    { text: 'AI 知识库', href: getBlogPermalink() },
-    { text: '常见问题', href: getPermalink('/#faq') },
-    { text: '关于', href: getPermalink('/about') },
-    { text: '联系作者', href: '#consult-author' },
+    { text: 'AI会员充值', href: getPermalink('/services') },
+    { text: 'AI知识库', href: getBlogPermalink() },
+    { text: '关于本站', href: getPermalink('/about') },
+    { text: '联系客服', href: '#consult-author' },
   ],
-  actions: [{ text: '咨询作者', href: '#consult-author', icon: 'tabler:message-circle' }],
+  actions: [{ text: '咨询客服', href: '#consult-author', icon: 'tabler:message-circle' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'AI 服务',
+      title: 'AI会员充值',
       links: [
         { text: 'ChatGPT', href: getPermalink('/services#chatgpt') },
         { text: 'Claude', href: getPermalink('/services#claude') },
+        { text: 'Grok', href: getPermalink('/services#grok') },
         { text: 'Gemini', href: getPermalink('/services#gemini') },
       ],
     },
@@ -33,7 +33,7 @@ export const footerData = {
     {
       title: '联系',
       links: [
-        { text: '咨询作者', href: '#consult-author' },
+        { text: '咨询客服', href: '#consult-author' },
         { text: '联系页面', href: getPermalink('/contact') },
       ],
     },

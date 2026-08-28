@@ -2,11 +2,12 @@
 title: 订阅 AI 工具前，先检查这 6 件事
 publishDate: 2026-08-27
 excerpt: 付费不等于效率提升。订阅 ChatGPT、Claude 或其他 AI 产品前，用这份清单减少冲动消费和账号风险。
+image: https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1651&q=80
 category: 避坑指南
 tags:
   - AI 订阅
   - 避坑
-author: AI 实用指南
+author: AI 学习实验室
 ---
 
 AI 产品更新很快，订阅前花十分钟确认以下问题，往往能省下后续大量时间。

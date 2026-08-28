@@ -2,24 +2,27 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-const metadata = { title: '关于', description: '关于 AI 实用指南：分享真实、清晰、可落地的 AI 使用经验。' };
+const metadata = { title: '关于本站', description: '关于 AI 学习实验室：分享真实、清晰、可落地的 AI 使用经验。' };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="关于本站"
     title={'把复杂的 AI，讲得<span class="text-primary">简单一点</span>'}
-    subtitle="这里是一个个人维护的 AI 服务与知识分享网站，关注工具的真实体验、具体用法和使用风险。"
+    subtitle="AI 学习实验室是一个个人维护的 AI 会员充值与知识分享网站，关注工具的真实体验、具体用法和使用风险。"
     actions={[
       { variant: 'primary', text: '阅读知识库', href: '/blog' },
-      { text: '联系作者', href: '#consult-author' },
+      { text: '联系客服', href: '#consult-author' },
     ]}
   />
   <Features
     title="我们坚持的原则"
     columns={3}
     items={[
-      { title: '经验优先', description: '尽可能基于实际使用和具体场景，不做脱离需求的参数堆砌。', icon: 'tabler:bulb' },
+      {
+        title: '最优价格',
+        description: '官方渠道优先，始终把稳定放在第一位。兼顾更低价格，提供适合长期使用的选择。',
+        icon: 'tabler:bulb',
+      },
       {
         title: '诚实透明',
         description: '明确说明工具限制、政策变化和潜在风险，不承诺无法保证的结果。',

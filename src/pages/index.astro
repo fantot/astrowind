@@ -28,18 +28,18 @@ const services = [
     tags: ['订阅咨询', '长文处理', 'Claude Code'],
   },
   {
+    id: 'grok',
+    name: 'Grok',
+    icon: 'tabler:brand-x',
+    desc: 'xAI 推出的智能助手，适合实时信息获取、热点分析与创意对话。',
+    tags: ['会员充值', '实时信息', '使用指导'],
+  },
+  {
     id: 'gemini',
     name: 'Gemini',
     icon: 'tabler:brand-google',
-    desc: '结合 Google 生态，提供模型选择与实际应用指导。',
-    tags: ['使用指导', '模型对比', 'Google 生态'],
-  },
-  {
-    id: 'other',
-    name: '其他 AI 工具',
-    icon: 'tabler:apps',
-    desc: 'AI 绘图、AI 视频及其他热门工具的选型与避坑建议。',
-    tags: ['工具选型', 'AI 绘图', 'AI 视频'],
+    desc: '结合 Google 生态，提供会员充值、模型选择与实际应用指导。',
+    tags: ['会员充值', '模型对比', 'Google 生态'],
   },
 ];
 ---
@@ -47,12 +47,12 @@ const services = [
 <Layout metadata={metadata}>
   <Hero
     id="home"
-    tagline="AI 服务 · 实用知识 · 一对一咨询"
+    tagline="AI会员充值 · 实用知识 · 一对一咨询"
     title={'让 AI 更简单、<span class="text-primary">更好用</span>'}
     subtitle="AI 工具使用、订阅咨询与实用知识分享。少走弯路，把合适的 AI 真正用进工作和生活。"
     actions={[
-      { variant: 'primary', text: '查看 AI 服务', href: '#services', icon: 'tabler:arrow-down' },
-      { text: '咨询作者', href: '#consult-author', icon: 'tabler:message-circle' },
+      { variant: 'primary', text: '查看会员充值', href: '#services', icon: 'tabler:arrow-down' },
+      { text: '咨询客服', href: '#consult-author', icon: 'tabler:message-circle' },
     ]}
   >
     <Fragment slot="bg">
@@ -62,8 +62,9 @@ const services = [
       </div>
     </Fragment>
     <Fragment slot="content">
-      <div class="mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-3 text-sm text-muted sm:gap-6">
-        <div><strong class="block text-2xl text-default dark:text-white">真实</strong>使用经验</div>
+      <div class="mx-auto mt-10 grid max-w-4xl grid-cols-4 gap-3 text-sm text-muted sm:gap-6">
+        <div><strong class="block text-2xl text-default dark:text-white">正规</strong>充值渠道</div>
+        <div><strong class="block text-2xl text-default dark:text-white">可靠</strong>可走第三方电商</div>
         <div><strong class="block text-2xl text-default dark:text-white">持续</strong>内容更新</div>
         <div><strong class="block text-2xl text-default dark:text-white">一对一</strong>问题咨询</div>
       </div>
@@ -73,9 +74,9 @@ const services = [
   <section id="services" class="scroll-mt-24 py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <div class="mx-auto mb-10 max-w-2xl text-center">
-        <p class="mb-2 font-semibold text-primary">热门 AI 服务</p>
-        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">选对工具，也用对方法</h2>
-        <p class="mt-4 text-muted">不售卖夸张承诺，只根据你的实际需求提供订阅、使用和工具选择建议。</p>
+        <p class="mb-2 font-semibold text-primary">AI会员充值</p>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">主流 AI 会员，按需选择</h2>
+        <p class="mt-4 text-muted">提供主流 AI 工具会员充值咨询，并根据你的实际需求给出版本和使用建议。</p>
       </div>
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
@@ -108,8 +109,8 @@ const services = [
     id="knowledge"
     title="最新 AI 知识"
     linkText="查看全部文章"
-    information="持续整理 AI 工具教程、实战技巧和避坑经验。现有 Markdown / MDX 文章会自动显示在这里。"
-    count={3}
+    information="持续分享 AI 工具教程、实战技巧、会员选择和避坑经验，让每一次学习都有实际收获。"
+    count={4}
   />
 
   <Features
@@ -119,8 +120,8 @@ const services = [
     columns={3}
     items={[
       {
-        title: '实际使用经验',
-        description: '基于真实工具体验和应用场景，不照搬参数，不制造焦虑。',
+        title: '最优价格',
+        description: '官方渠道优先，始终把稳定放在第一位。兼顾更低价格，提供适合长期使用的选择。',
         icon: 'tabler:flask',
       },
       {
@@ -140,11 +141,11 @@ const services = [
     items={[
       {
         title: '可以直接在网站购买订阅吗？',
-        description: '暂时不提供在线支付。请先联系作者说明需求，确认适合的方案与注意事项。',
+        description: '暂时不提供在线支付。请先联系客服说明需求，确认适合的方案与注意事项。',
       },
       {
         title: '咨询哪些 AI 工具？',
-        description: '目前以 ChatGPT、Claude、Gemini 为主，也可以咨询 AI 绘图、AI 视频及其他常用工具。',
+        description: '目前提供 ChatGPT、Claude、Grok 和 Gemini 的会员充值与使用咨询。',
       },
       {
         title: '能保证账号或服务永久可用吗？',
@@ -164,7 +165,7 @@ const services = [
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.35),transparent_45%)]">
       </div>
       <div class="relative mx-auto max-w-2xl">
-        <p class="font-semibold text-blue-300">联系作者</p>
+        <p class="font-semibold text-blue-300">联系客服</p>
         <h2 class="mt-3 text-3xl font-bold sm:text-4xl">有具体问题？直接聊聊</h2>
         <p class="mt-4 leading-7 text-slate-300">
           告诉我你正在使用的工具、遇到的问题或希望实现的目标，我会尽量给出清晰、务实的建议。

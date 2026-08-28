@@ -3,46 +3,68 @@ import { Icon } from 'astro-icon/components';
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 
-const metadata = { title: 'AI 服务', description: 'ChatGPT、Claude、Gemini 与其他 AI 工具的订阅咨询和使用指导。' };
+const metadata = {
+  title: 'AI会员充值',
+  description: 'ChatGPT、Claude、Grok 与 Gemini 的会员充值咨询和使用指导。',
+};
 const services = [
   {
     id: 'chatgpt',
     name: 'ChatGPT',
     icon: 'tabler:brand-openai',
     intro: '适合通用问答、写作、数据分析、图像与深度研究等场景。',
-    items: ['版本与订阅方案选择', '账号和常见使用问题', '提示词、GPTs 与工作流建议'],
+    items: [
+      '版本与订阅方案选择',
+      '账号和常见使用问题',
+      '提示词、GPTs 与工作流建议',
+      'Plus 最低 129 元/月，30 天质保，可开票',
+    ],
   },
   {
     id: 'claude',
     name: 'Claude',
     icon: 'tabler:sparkles',
     intro: '擅长长文本、严谨写作、代码理解与复杂资料处理。',
-    items: ['订阅与模型选择建议', '长文档和写作场景指导', 'Claude Code 基础使用'],
+    items: [
+      '订阅与模型选择建议',
+      '长文档和写作场景指导',
+      'Claude Code 基础使用',
+      'Pro 最低 138 元/月，30 天质保，可开票',
+    ],
+  },
+  {
+    id: 'grok',
+    name: 'Grok',
+    icon: 'tabler:brand-x',
+    intro: '由 xAI 推出，适合实时信息获取、热点分析和多模态任务。',
+    items: [
+      '会员版本与充值咨询',
+      '实时信息与热点分析',
+      '常见功能和使用指导',
+      'SuperGrok 套餐，价格咨询，30 天质保，可开票',
+    ],
   },
   {
     id: 'gemini',
     name: 'Gemini',
     icon: 'tabler:brand-google',
     intro: '与 Google 产品生态结合紧密，适合研究、办公和多模态任务。',
-    items: ['版本差异与适用场景', 'Google 生态协作建议', '常见问题与使用指导'],
-  },
-  {
-    id: 'other',
-    name: '其他 AI 工具',
-    icon: 'tabler:apps',
-    intro: '根据实际需求选择 AI 绘图、AI 视频和效率类产品。',
-    items: ['工具选型与横向比较', 'AI 绘图、视频入门', '付费前风险与避坑建议'],
+    items: [
+      '会员版本与充值咨询',
+      'Google 生态协作建议',
+      '常见问题与使用指导',
+      'Google AI Pro 套餐，价格咨询，30 天质保，可开票',
+    ],
   },
 ];
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="AI 服务"
-    title={'帮你选对工具，<span class="text-primary">少走弯路</span>'}
-    subtitle="从需求判断、订阅选择到实际使用，提供清晰、务实的一对一建议。暂不提供在线支付，请先联系作者确认需求。"
+    title={'主流 AI 会员充值，<span class="text-primary">简单省心</span>'}
+    subtitle="提供 ChatGPT、Claude、Grok 和 Gemini 会员充值咨询，并结合实际需求给出版本选择与使用建议。暂不提供在线支付，请先联系客服确认。"
     actions={[
-      { variant: 'primary', text: '咨询作者', href: '#consult-author', icon: 'tabler:message-circle' },
+      { variant: 'primary', text: '咨询客服', href: '#consult-author', icon: 'tabler:message-circle' },
       { text: '阅读 AI 知识', href: '/blog' },
     ]}
   />
