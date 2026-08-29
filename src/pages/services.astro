@@ -4,8 +4,20 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
-  title: 'AI会员充值',
-  description: 'ChatGPT、Claude、Grok 与 Gemini 的会员充值咨询和使用指导。',
+  title: 'GPT Plus充值_GPT会员充值_Claude与Grok充值',
+  description:
+    'GPT Plus充值最低 129 元/月，Claude Pro充值最低 138 元/月，并提供 Grok、Gemini 会员充值咨询。官方渠道优先，30 天质保，可开票。',
+  keywords: [
+    'gpt会员充值',
+    'gpt plus充值',
+    'plus最低价',
+    'ChatGPT Plus充值',
+    'Claude充值',
+    'Claude Pro充值',
+    'Grok充值',
+    'SuperGrok充值',
+    'Gemini充值',
+  ],
 };
 const services = [
   {
@@ -100,4 +112,18 @@ const services = [
       }
     </div>
   </section>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'AI 会员充值咨询',
+      provider: { '@type': 'Organization', name: 'AI 学习实验室', url: 'https://www.aixilab.com' },
+      areaServed: 'CN',
+      serviceType: ['GPT Plus充值', 'Claude充值', 'Grok充值', 'Gemini充值'],
+      description: metadata.description,
+      url: 'https://www.aixilab.com/services',
+    })}
+  />
 </Layout>

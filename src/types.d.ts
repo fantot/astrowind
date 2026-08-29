@@ -46,6 +46,7 @@ export interface MetaData {
   robots?: MetaDataRobots;
 
   description?: string;
+  keywords?: string | string[];
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;

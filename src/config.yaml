@@ -11,7 +11,7 @@ metadata:
   title:
     default: AI 学习实验室
     template: '%s｜AI 学习实验室'
-  description: '提供 ChatGPT、Claude、Grok、Gemini 会员充值服务与实用 AI 知识分享。'
+  description: 'AI 学习实验室提供 GPT会员充值、GPT Plus充值、Claude充值、Grok充值和 Gemini 会员充值咨询，官方渠道优先，支持长期稳定使用。'
   robots:
     index: true
     follow: true
