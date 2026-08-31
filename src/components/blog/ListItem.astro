@@ -28,7 +28,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
     image &&
       (link ? (
         <a class="relative block group" href={link ?? 'javascript:void(0)'}>
-          <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
+          <div class="relative aspect-[4/3] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
             {image && (
               <Image
                 src={image}
@@ -36,6 +36,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
                 widths={[400, 900]}
                 width={900}
                 height={506}
+                layout="cover"
                 sizes="(max-width: 900px) 400px, 900px"
                 alt={post.title}
                 format="webp"
@@ -46,7 +47,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
           </div>
         </a>
       ) : (
-        <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
+        <div class="relative aspect-[4/3] overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg">
           {image && (
             <Image
               src={image}
@@ -54,6 +55,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
               widths={[400, 900]}
               width={900}
               height={506}
+              layout="cover"
               sizes="(max-width: 900px) 400px, 900px"
               alt={post.title}
               format="webp"

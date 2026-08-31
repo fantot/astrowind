@@ -54,7 +54,16 @@ export default defineConfig({
   ],
 
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const pathname = new URL(page).pathname;
+        return (
+          !/^\/tag\//.test(pathname) &&
+          !/^\/blog\/\d+\/?$/.test(pathname) &&
+          !/^\/category\/[^/]+\/\d+\/?$/.test(pathname)
+        );
+      },
+    }),
     mdx(),
     icon({
       include: {
